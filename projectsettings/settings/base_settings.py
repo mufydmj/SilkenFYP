@@ -28,7 +28,7 @@ PROJECT_APPS = [
     'koalixcrm.subscriptions',
 ]
 
-INSTALLED_APPS = PREREQUISITE_APPS + PROJECT_APPS
+INSTALLED_APPS = PROJECT_APPS + PREREQUISITE_APPS  # previously was PREREQUISITE_APPS + PROJECT_APPS
 
 KOALIXCRM_PLUGINS = (
     'koalixcrm.subscriptions',
@@ -121,3 +121,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     )
 }
+
+GRAPPELLI_ADMIN_TITLE = "SilkenERP"

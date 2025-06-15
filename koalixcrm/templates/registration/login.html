@@ -1,0 +1,28 @@
+{% extends "grappelli/base.html" %}
+
+{% block title %}Login | SilkenERP{% endblock %}
+
+{% block branding %}
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">SilkenERP Admin</a></h1>
+{% endblock %}
+
+{% block content %}
+  <div class="login-box">
+    <h2>Welcome to SilkenERP</h2>
+    {% if form.errors %}
+      <p class="error">Invalid username or password.</p>
+    {% endif %}
+    <form action="{{ form_url }}" method="post" id="login-form">{% csrf_token %}
+      <div>
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" autofocus required id="id_username">
+      </div>
+      <div>
+        <label for="id_password">Password:</label>
+        <input type="password" name="password" required id="id_password">
+      </div>
+      <input type="submit" value="Log in">
+      <input type="hidden" name="next" value="{{ next }}">
+    </form>
+  </div>
+{% endblock %}

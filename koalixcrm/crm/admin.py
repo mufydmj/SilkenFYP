@@ -72,3 +72,9 @@ admin.site.register(ProjectLinkType, OptionProjectLinkType)
 admin.site.register(ProjectStatus, OptionProjectStatus)
 admin.site.register(ReportingPeriod, ReportingPeriodAdmin)
 admin.site.register(ReportingPeriodStatus, OptionReportingPeriodStatus)
+
+admin.site.site_header = "SilkenERP"
+admin.site.site_title = "Silken"
+admin.site.index_title = "Welcome to Silken Admin"
+admin.site.grappelli_admin_title = "SilkenERP"
+admin.site.get_admin_title = "SilkenERP"

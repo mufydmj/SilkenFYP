@@ -18,7 +18,7 @@ class CustomIndexDashboard(Dashboard):
 
     def init_with_context(self, context):
         self.children.append(modules.Group(
-            _('koalixcrm Version ' + KOALIXCRM_VERSION),
+            _('SilkenERP'),
             column=1,
             collapsible=True,
             children=[
@@ -142,61 +142,62 @@ class CustomIndexDashboard(Dashboard):
             ]
         ))
 
-        # append another link list module for "support".
-        self.children.append(modules.LinkList(
-            _('Media Management'),
-            column=2,
-            children=[
-                {
-                    'title': _('FileBrowser'),
-                    'url': '/admin/filebrowser/browse/',
-                    'external': False,
-                },
-            ]
-        ))
+        # # append another link list module for "support".
+        # self.children.append(modules.LinkList(
+        #     _('Media Management'),
+        #     column=2,
+        #     children=[
+        #         {
+        #             'title': _('FileBrowser'),
+        #             'url': '/admin/filebrowser/browse/',
+        #             'external': False,
+        #         },
+        #     ]
+        # ))
+        #
+        # # append another link list module for "support".
+        # self.children.append(modules.LinkList(
+        #     _('Support'),
+        #     column=2,
+        #     children=[
+        #         {
+        #             'title': _('koalixcrm on github'),
+        #             'url': 'https://github.com/scaphilo/koalixcrm/',
+        #             'external': True,
+        #         },
+        #         {
+        #             'title': _('Django Documentation'),
+        #             'url': 'http://docs.djangoproject.com/',
+        #             'external': True,
+        #         },
+        #         {
+        #             'title': _('Grappelli Documentation'),
+        #             'url': 'http://packages.python.org/django-grappelli/',
+        #             'external': True,
+        #         },
+        #         {
+        #             'title': _('Grappelli Google-Code'),
+        #             'url': 'http://code.google.com/p/django-grappelli/',
+        #             'external': True,
+        #         },
+        #     ]
+        # ))
+        #
+        # # append a feed module
+        # self.children.append(modules.Feed(
+        #     _('Latest Django News'),
+        #     column=2,
+        #     feed_url='http://www.djangoproject.com/rss/weblog/',
+        #     limit=5
+        # ))
+        #
+        # # append a recent actions module
+        # self.children.append(modules.RecentActions(
+        #     _('Recent Actions'),
+        #     limit=5,
+        #     collapsible=False,
+        #     column=3,
+        # ))
 
-        # append another link list module for "support".
-        self.children.append(modules.LinkList(
-            _('Support'),
-            column=2,
-            children=[
-                {
-                    'title': _('koalixcrm on github'),
-                    'url': 'https://github.com/scaphilo/koalixcrm/',
-                    'external': True,
-                },
-                {
-                    'title': _('Django Documentation'),
-                    'url': 'http://docs.djangoproject.com/',
-                    'external': True,
-                },
-                {
-                    'title': _('Grappelli Documentation'),
-                    'url': 'http://packages.python.org/django-grappelli/',
-                    'external': True,
-                },
-                {
-                    'title': _('Grappelli Google-Code'),
-                    'url': 'http://code.google.com/p/django-grappelli/',
-                    'external': True,
-                },
-            ]
-        ))
-
-        # append a feed module
-        self.children.append(modules.Feed(
-            _('Latest Django News'),
-            column=2,
-            feed_url='http://www.djangoproject.com/rss/weblog/',
-            limit=5
-        ))
-
-        # append a recent actions module
-        self.children.append(modules.RecentActions(
-            _('Recent Actions'),
-            limit=5,
-            collapsible=False,
-            column=3,
-        ))
 
 
